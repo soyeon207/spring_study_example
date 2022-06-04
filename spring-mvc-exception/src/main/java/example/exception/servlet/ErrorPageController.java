@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @Controller
@@ -20,14 +19,14 @@ public class ErrorPageController {
     String ERROR_STATUS_CODE = "javax.servlet.error.status_code";
 
     @RequestMapping("/error-page/404")
-    public String errorPage404(HttpServletRequest request, HttpServletResponse response) {
+    public String errorPage404(HttpServletRequest request) {
         log.info("errorPage 404");
         printErrorInfo(request);
         return "error-page/404";
     }
 
     @RequestMapping("/error-page/500")
-    public String errorPage500(HttpServletRequest request, HttpServletResponse response) {
+    public String errorPage500(HttpServletRequest request) {
         log.info("errorPage 500");
         printErrorInfo(request);
         return "error-page/500";
