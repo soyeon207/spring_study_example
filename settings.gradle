@@ -1,3 +1,4 @@
 rootProject.name = 'study_example'
 include 'spring-mvc-exception'
+include 'java-example'
 
