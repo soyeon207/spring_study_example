@@ -16,7 +16,7 @@ public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
 
         // 예외가 넘어오면 정상적인 ModelAndView 로 반환
         try {
-            if (ex instanceof IllegalAccessException) {
+            if (ex instanceof IllegalArgumentException) {
                 log.info("IllegalArgumentException resolver to 400");
                 // IllegalAccessException error 를 400 에러로 리턴
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, ex.getMessage());
